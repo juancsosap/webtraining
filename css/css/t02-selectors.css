@@ -1,0 +1,19 @@
+/* Element Selector */
+h2 {
+	color: green; 
+}
+
+/* ID Selector */
+#element2 {
+	color: blue; 
+}
+
+/* Class Selector */
+.error {
+	color: red; 
+}
+
+/* Grouping Selectors */
+h2, #element2, .error {
+	font-size: 50px;
+}

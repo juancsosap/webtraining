@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include ../partials/head.ejs %>
+	</head>
+	<body>
+		<% include ../partials/banner.ejs %>
+		<div class="container">
+			<% if(error === '') { %>
+			<div class="row">
+				<h5 class="col-md-1 text-primary">ID</h5>
+				<p class="col-md-4"><%= data._id %></p>
+			</div>
+			<div class="row">
+				<h5 class="col-md-1 text-primary">Name</h5>
+				<p class="col-md-4"><%= data.name %></p>
+			</div>
+			<div class="row">
+				<h5 class="col-md-1 text-primary">Surname</h5>
+				<p class="col-md-4"><%= data.surname %></p>
+			</div>
+			<div class="row">
+				<h5 class="col-md-1 text-primary">Age</h5>
+				<p class="col-md-4"><%= data.age %></p>
+			</div>
+			<% } else { %>
+			<h3><%= error %></h3>
+			<% } %>
+		</div>
+	</body>
+</html>

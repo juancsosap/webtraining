@@ -1,0 +1,13 @@
+p {background-color: red;}
+
+/* Independent Margin */
+p.top {margin-top: 50px;}
+p.right {margin-right: 50px;}
+p.bottom {margin-bottom: 50px;}
+p.left {margin-left: 50px;}
+
+/* Margin Shortcut */
+p.margin1 {margin: 50px;}
+p.margin2 {margin: 50px 100px;}
+p.margin3 {margin: 50px 100px 150px 200px;}
+p.margin4 {margin: auto;}

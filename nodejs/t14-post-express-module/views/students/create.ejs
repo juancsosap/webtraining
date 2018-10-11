@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include ../partials/head.ejs %>
+	</head>
+	<body>
+		<% include ../partials/banner.ejs %>
+		<div class="container">
+			<form class="form-inline" method="post" action="/students/create">
+				<div class="form-group col-md-7">
+					<input type="hidden" name="id" value="0" />
+					<input type="text" class="form-control" name="name" placeholder="Name" />
+					<input type="text" class="form-control" name="surname" placeholder="Surname" />
+					<input type="number" class="form-control col-md-2" name="age" placeholder="Age" />
+				</div>
+				<input type="submit" class="form-control" value="Add" />
+				<input type="reset" class="form-control" value="Reset" />
+			</form>
+		</div>
+	</body>
+</html>

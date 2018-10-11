@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html ng-app="AppModule">
+	<head>
+		<title>Actions - AngularJS Training</title>
+		<meta charset="utf-8">
+		<base href="../" target="_self" />
+		<link rel="shortcut icon" type="image/x-icon" href="../img/angular.svg" />
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+		<script type="text/javascript" src="js/ctrl.js"></script>
+		<script type="text/javascript" src="js/filter.js"></script>
+	</head>
+	<body ng-controller="AppController">
+
+		<div class="jumbotron">
+			<h1>{{ title }}</h1>
+			<p>
+				Created by {{ author.name }} {{ author.surname }} on {{ year }}.
+			</p>
+		</div>
+
+		<div class="container">
+			<h2>
+				Trainees List
+				<input type="button" ng-click="resetsort()" value="reset" class="btn btn-sm btn-default col-md-2 float-right">
+			</h2>
+
+			<table class="table table-bordered">
+				<tr ng-init="resetsort()">
+					<th ng-repeat="field in fields">
+						<a href="" class="{{ sort[field] }}" ng-click="sorter(field)">
+							{{ field | capitalize }}
+						</a>
+					</th>
+				</tr>
+				<tr ng-repeat="trainee in trainees | orderBy: field">
+					<td>{{ trainee.name }}</td>
+					<td>{{ trainee.surname | uppercase }}</td>
+					<td>{{ trainee.phone }}</td>
+					<td>{{ trainee.address }}</td>
+				</tr>
+			</table>
+		</div>
+
+	</body>
+</html>

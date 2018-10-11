@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html ng-app="AppModule">
+	<head>
+		<title>Local Storage Module - AngularJS Training</title>
+		<meta charset="utf-8">
+		<base href="../" target="_self" />
+		<link rel="shortcut icon" type="image/x-icon" href="../img/angular.svg" />
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+		<script type="text/javascript" src="js/angular-local-storage.min.js"></script>
+		<script type="text/javascript" src="js/ctrl.js"></script>
+	</head>
+	<body ng-controller="AppController">
+
+		<div class="jumbotron" id="top">
+			<h1>{{ title }}</h1>
+			<p>
+				Created by {{ author.name }} {{ author.surname }} on {{ year }}.
+			</p>
+		</div>
+
+		<div role="main" class="container">
+			<h2>
+				ToDo List
+				<input type="button" ng-click="cleanToDo()" value="Clean" class="btn btn-sm btn-default float-right" />
+			</h2>
+			<table class="table table-bordered">
+				<tr>
+					<th>description</th>
+					<th>date</th>
+				</tr>
+				<tr ng-repeat="todo in list | orderBy: 'date'">
+					<td>{{ todo.description | uppercase }}</td>
+					<td>{{ todo.date | date: 'fullDate' }}</td>
+				</tr>
+			</table>
+		</div>
+
+		<div role="form" class="container">
+			<form class="" ng-submit="addToDo()">
+				<div class="form-group">
+					<label class="control-label col-md-2">Description</label>
+					<input type="text" class="form-control col-md-4" ng-model="newToDo.description">
+				</div>
+				<div class="form-group">
+					<label class="control-label col-md-2">Date</label>
+					<input type="date" class="form-control col-md-4" ng-model="newToDo.date">
+				</div>
+				<div class="form-group col-md-offset-2 col-md-6">
+					<input type="submit" value="Add" class="btn btn-default" />
+					<input type="reset" value="Reset" class="btn btn-default" />
+				</div>
+			</form>
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html ng-app="AppModule">
+	<head>
+		<title>Events - AngularJS Training</title>
+		<meta charset="utf-8">
+		<base href="../" target="_self" />
+		<link rel="shortcut icon" type="image/x-icon" href="../img/angular.svg" />
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+		<script type="text/javascript" src="js/ctrl.js"></script>
+	</head>
+	<body ng-controller="AppController">
+
+		<div class="jumbotron">
+			<h1>{{ title }}</h1>
+			<p>
+				Created by {{ author.name }} {{ author.surname }} on {{ year }}.
+			</p>
+		</div>
+
+		<div class="container">
+			<h2 ng-init="flag1 = true" ng-mouseover="flag1 = false" ng-mouseleave="flag1 = true"
+				ng-class="{'text-danger':!flag1, 'text-success':flag1}">Mouse Events I (Over/Leave)</h2>
+			<h2 ng-init="flag2 = true" ng-mousedown="flag2 = false" ng-mouseup="flag2 = true"
+				ng-class="{'text-danger':!flag2, 'text-success':flag2}">Mouse Events II (Up/Down)</h2>
+			<h2 ng-init="flag3 = true" ng-dblclick="flag3 = !flag3"
+				ng-class="{'text-danger':!flag3, 'text-success':flag3}">Mouse Events III (Double Click)</h2>
+			<h2 ng-init="flag4 = true" ng-class="{'text-danger':!flag4, 'text-success':flag4}">
+				Key Events (Up/Down)
+				<input type="text" class="form-control col-md-4"
+					ng-keydown="flag4 = false" ng-keyup="flag4 = true" />
+			</h2>
+			<h2 ng-init="flag5 = true" ng-class="{'text-danger':!flag5, 'text-success':flag5}">
+				Clipboard Events (Copy/Paste)
+				<input type="text" class="form-control col-md-4"
+					ng-copy="flag5 = false" ng-paste="flag5 = true" />
+			</h2>
+
+	</body>
+</html>

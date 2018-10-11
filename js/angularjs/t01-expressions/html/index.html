@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app>
+	<head>
+		<title>Expressions - AngularJS Training</title>
+		<meta charset="utf-8">
+		<base href="../" target="_self" />
+		<link rel="shortcut icon" type="image/x-icon" href="../img/angular.svg" />
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+	</head>
+	<body ng-init="msg = 'Expressions - AngularJS'">
+
+		<div class="jumbotron">
+			<h1>{{ msg }}</h1>
+			<p ng-init="year = 2018">
+				Created on {{ year }} after {{ year - 2014 }} year of release AngularJS.
+			</p>
+		</div>
+
+	</body>
+</html>

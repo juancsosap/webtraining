@@ -1,0 +1,37 @@
+/* Background */
+h2 {
+	height: 500px;
+}
+
+h2#e1 {
+	background-color: rgba(0,0,255,0.3);
+}
+
+h2#e2 {
+	background-image: url("../img/htmlcss.png");
+}
+
+h2#e3 {
+	background-image: url("../img/htmlcss.png");
+	background-repeat: repeat-x;
+}
+
+h2#e4 {
+	background-image: url("../img/htmlcss.png");
+	background-repeat: no-repeat;
+}
+
+h2#e5 {
+	background-image: url("../img/htmlcss.png");
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+h2#e6 {
+	background: rgba(0,0,255,0.3) url("../img/htmlcss.png") no-repeat right top;
+}
+
+h2#e7 {
+	background: rgba(0,0,255,0.3) url("../img/htmlcss.png") no-repeat right top;
+	background-attachment: fixed;
+}

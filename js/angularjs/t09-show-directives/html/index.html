@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html ng-app="AppModule">
+	<head>
+		<title>Show Directives - AngularJS Training</title>
+		<meta charset="utf-8">
+		<base href="../" target="_self" />
+		<link rel="shortcut icon" type="image/x-icon" href="../img/angular.svg" />
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+		<script type="text/javascript" src="js/ctrl.js"></script>
+	</head>
+	<body ng-controller="AppController">
+
+		<div class="jumbotron">
+			<h1>{{ title }}</h1>
+			<p>
+				Created by {{ author.name }} {{ author.surname }} on {{ year }}.
+			</p>
+		</div>
+
+		<div class="container">
+			<h2>
+				Other Trainings
+				<input type="button" value="Show" ng-click="showList = true" ng-hide="showList" class="form-control col-md-2 float-right" />
+				<input type="button" value="Hide" ng-click="showList = false" ng-show="showList" class="form-control col-md-2 float-right" />
+			</h2>
+			<ul ng-show="showList" ng-cloak>
+				<li ng-repeat="training in trainings">{{ training }}</li>
+			</ul>
+		</div>
+
+		<div class="container">
+			<img ng-src="{{ imgPath }}" />
+		</div>
+
+	</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="AppModule">
+	<head>
+		<title>Filters - AngularJS Training</title>
+		<meta charset="utf-8">
+		<base href="../" target="_self" />
+		<link rel="shortcut icon" type="image/x-icon" href="../img/angular.svg" />
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+		<script type="text/javascript" src="js/ctrl.js"></script>
+		<script type="text/javascript" src="js/filter.js"></script>
+	</head>
+	<body ng-controller="AppController">
+
+		<div class="jumbotron">
+			<h1>{{ title }}</h1>
+			<p>
+				Created by {{ author.name }} {{ author.surname }} on {{ year }}.
+			</p>
+		</div>
+
+		<div class="container">
+			<h2>
+				Trainees List
+				<div class="btn-group float-right col-md-2">
+					<input type="button" ng-click="page=page-1" ng-disabled="page<=1"
+						value="prev" class="btn btn-sm btn-default col-md-6" />
+					<input type="button" ng-click="page=page+1" ng-disabled="trainees.length<=page*step"
+						value="next" class="btn btn-sm btn-default col-md-6" />
+				</div>
+			</h2>
+			<table class="table table-bordered" ng-init="page=1;step=2;">
+				<tr>
+					<th ng-repeat="field in fields">{{ field }}</th>
+				</tr>
+				<tr ng-repeat="trainee in trainees | orderBy: '+address' : '-name' : '-surname' | limitTo: step : (page-1)*step">
+					<td>{{ trainee.name }}</td>
+					<td>{{ trainee.surname | uppercase }}</td>
+					<td>{{ trainee.code | lowercase }}</td>
+					<td>{{ trainee.phone | shorten: 10 }}</td>
+					<td>{{ trainee.address }}</td>
+					<td>{{ trainee.register | date: 'dd-MM-yyyy' }}</td>
+					<td>{{ trainee.payment | currency: 'CLP ' : 0 }}</td>
+				</tr>
+			</table>
+		</div>
+
+	</body>
+</html>

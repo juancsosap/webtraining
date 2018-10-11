@@ -1,0 +1,247 @@
+Which are attributes of Jasmine?
+[ ] Used to create complex JavaScript projects and programs
+[x] Can be integrated into node.js
+[x] Adheres to Behavior-Driven Development principles
+[ ] Provides a testing framework for VBscript code
+[x] Provides a testing framework for JavaScript code
+
+------------------------------------------------------------
+
+Which element of the Jasmine architecture contains all of the tests?
+( ) src
+(x) spec
+( ) lib
+( ) SpecRunner.html
+
+------------------------------------------------------------
+
+You download and unzip the jasmine standalone setup zip file to deploy Jasmine. The directory contains several files including the SpecRunner.html file. Which option describes the SpecRunner.html file?
+( ) It's the source that is being tested
+( ) It contains the Jasmine specific files for the Jasmine framework
+( ) It contains the test details
+(x) It's used to execute the test
+
+------------------------------------------------------------
+
+Which the parameters related to the function describe() available in the Jasmine Framework?
+[x] A function parameter that defines the contents of the test suite
+[ ] A string parameter that describes the spec
+[ ] A function parameter that define the test
+[x] A string parameter which contains the name of the test suite
+
+------------------------------------------------------------
+
+Which the parameters related to the function it() available in the Jasmine Framework?
+[ ] A function parameter that defines the contents of the test suite
+[x] A string parameter that describes the spec
+[x] A function parameter that define the test
+[ ] A string parameter which contains the name of the test suite
+
+------------------------------------------------------------
+
+You create a new spec to test a new source file that was created. You want to run a test to ensure everything succeeds and there are no failures. Which file will need to open to execute the test?
+[ ] boot.js
+[ ] PlayerSpec.js
+[ ] jasmine-html.js
+[ ] jasmine.js
+[x] SpecRunner.html
+
+------------------------------------------------------------
+
+You are task to run a test on code that was created. You open the SpecRunner.html file to execute a test. When the results appear, you see the information displayed in the image. What does this indicate?
+[ ] There are only a total of four Specs
+[x] Four specs have succeeded
+[x] There are a total of six Specs
+[x] Two tests have failed
+[ ] Four specs have failed
+[ ] Two specs have succeeded
+
+------------------------------------------------------------
+
+You need to create toBeCloseTo() Jasmine test matcher code that will expect 2.2334 to be close to 2.2335 with 3 digits of precision. Which option should be used to ensure that when you run a test it will pass?
+( ) expect(2.2334).toBeCloseTo(2.2335, 4);
+( ) expect(2.2334).toBeCloseTo(2.2335, 33);
+(x) expect(2.2334).toBeCloseTo(2.2335, 3);
+( ) expect(2.2334).toBeCloseTo(2.2335);
+
+------------------------------------------------------------
+
+Suppose a custom matcher has been created. The customMatcher is using a toBeCloseEnough() function. The function returns back an object, a compare; function is returned and the object has a key compare value function. What are the two arguments that the compare function takes?
+[ ] Pass and message
+[ ] The utility
+[x] What is expected
+[x] The actual value
+
+------------------------------------------------------------
+
+Suppose you are working with toBeCloseTo() Jasmine matchers. Which of the following will pass the test when a test is executed?
+[x] expect(3.000).toBeCloseTo(3.001);
+[ ] expect(3.00).toBeCloseTo(3.01);
+[x] expect(2.00).toBeCloseTo(2.01, 1);
+[ ] expect(2.00).toBeCloseTo(2.01, 2);
+
+------------------------------------------------------------
+
+Based on the following Spec:
+
+describe('Illustrating beforeAll and afterAll', function () {
+  var globvar;
+  beforeAll(function () {
+    globvar = 100;
+  });
+  afterAll(function () {
+    globvar = 0;
+  });
+  it('test #1', function () {
+    expect(globvar).toEqual(100);
+  });
+  it('test #2', function () {
+    expect(globvar).toEqual(112);
+  });
+});
+
+The beforeAll() and afterAll() functions have been created in a spec.js file. Which statements are true about the beforeAll() and afterAll() functions?
+[x] The beforeAll() function will be executed before any of the specs are executed
+[x] The afterAll() function will be executed after all of the specs are executed
+[ ] The beforeAll() function will be executed after the first spec has executed
+[ ] The specs will be executed first
+[ ] The afterAll() function will be executed after the first spec has executed
+
+------------------------------------------------------------
+
+Which attributes have the Jasmine test variable functions beforeEach() and afterEach()?
+[ ] Variables are not reinitialized after the first spec, and retain values beetwen subsequent specs
+[ ] The functions are only called once
+[x] Variables can be initialized before and after each spec
+[x] The functions are called before and after each spec
+[x] Used to define variable Test-suite scope
+
+------------------------------------------------------------
+
+Which attributes have the Jasmine test variable functions beforeAll() and afterAll()?
+[x] Variables are not reinitialized after the first spec, and retain values beetwen subsequent specs
+[x] The functions are only called once
+[ ] Variables can be initialized before and after each spec
+[ ] The functions are called before and after each spec
+[x] Used to define variable Test-suite scope
+
+------------------------------------------------------------
+
+In Jasmine, how can we make individual specs pending?
+[x] Create a spec that has no function
+[x] Use the pending function within a spec
+[x] Use the xit function
+[ ] Invoke the xdescribe function
+[ ] Invoke the it function
+
+------------------------------------------------------------
+
+Which function would be executed to disable or make an entire test suite pending?
+( ) xit
+( ) it
+( ) beforeAll
+( ) afterAll
+( ) describe
+(x) xdescribe
+
+------------------------------------------------------------
+
+What are some attributes of spies in Jasmine?
+[ ] Used to make individual specs pending
+[x] Used when a test expectation cannot be used to determine when a returned value or change in an object state
+[x] Constructs that perform a minitoring function or state by pretending to be or mocking an actual function
+[ ] Used to make an entire test suite pending
+[ ] Used to define variable Test-suite scope
+[x] Test double that replaces a function with an equivalent implementation that is specific to the test scenario
+[x] Used to track function operation and usage
+
+------------------------------------------------------------
+
+Match the spy functions and matchers to their description
+1. and.throwError()
+2. and.stub()
+3. and.callFake()
+4. spyOn()
+5. toHaveBeenCalledWith()
+6. toHaveBeenCalled()
+
+{2} Chain that is deployed to return the original stubbing Behavior
+{3} Chaining used to make sure that the spy calls another function
+{4} Used to initiate the spy on an existing method
+{6} Used to spy on the function's called status
+{5} Used to spy on the function's argument list
+{1} Chain used to make sure that the spy is throwing a defined error value
+
+------------------------------------------------------------
+
+What is the purpose of creating spies in Jasmine?
+[ ] To define the contents of the test suite
+[x] To mock out a function that we are working with
+[ ] To make individual specs pending
+[ ] To ensure variables are not reinitialized after the first spec, and retain values between subsequent specs
+[x] To find out information about the function such as if it has been called or called with certain arguments
+
+------------------------------------------------------------
+
+Match the calls object methods used to track usage of spies to their attributes
+1. .calls.all()
+2. .calls.any()
+3. .calls.reset()
+4. .calls.count()
+5. .calls.argsFor(index)
+6. .calls.allArgs()
+
+{1} Returns the context and arguments passed
+{5} Returns the argument(s) passed for sequential calls to the spy
+{2} Returns false for no calls and true for one or more calls
+{3} Clears all tracking on a spy
+{4} Number of times the spy has been called
+{6} Returns all argument(s) passed for all calls to the spy
+
+------------------------------------------------------------
+
+Based on the following Spec:
+
+it('illustrates .and.stub()', function () {
+  spies.setName('Jane');
+  expect(name).toEqual('Jane');
+
+  spies.setName.and.stub();
+  name = null;
+
+  spies.setName('Jane');
+  expect(name).not.toEqual('Jane');
+  expect(name).toBeNull();
+});
+
+Suppose you are working with spy functions in Jasmine. You have included the and.stub function. What does the and.stub function do?
+( ) It will initiate the spy on an existing method
+(x) It will prevent the original function from executing
+( ) It will make sure that the spy is throwing a defined error value
+( ) It will allow spies to be created on the fly and then be tested
+( ) It will test to make sure the function has been called
+
+------------------------------------------------------------
+
+Suppose you need to test with Jasmine in Node.js. Jasmine has been installed locally and you created a spec with describe specs in t. What will you need to enter in the shell to execute the test?
+( ) vi /tmp/request/spec.js
+( ) vi spec/support/jasmine.json
+( ) node_modules/.bin/jasmine examples
+( ) node_modules/.bin/jasmine init
+(x) node_modules/.bin/jasmine
+
+------------------------------------------------------------
+
+You need to deploy Jasmine to Node.js. You want to install Jasmine locally. What command will you need to use to accomplish this?
+(x) npm install jasmine
+( ) node_modules/.bin/jasmine
+( ) npm install -g jasmine
+( ) jasmine init
+
+------------------------------------------------------------
+
+Suppose you want to use Jasmine within Node.js. Once you install the Jasmine Node package, what statement are true about using Jasmine within Node.js?
+[x] Jasmine tests can be developed and run
+[x] Jasmine examples can be used to create projects or use the projects as a reference
+[ ] Jasmine Node package examples are used as a reference only
+[ ] Test code can be used in other javascript frameworks

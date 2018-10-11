@@ -1,0 +1,16 @@
+p {
+	background-color: red;
+	font-size: 40px;
+}
+
+/* Independent Padding */
+p.top {padding-top: 50px;}
+p.right {padding-right: 50px;}
+p.bottom {padding-bottom: 50px;}
+p.left {padding-left: 50px;}
+
+/* Padding Shortcut */
+p.padding1 {padding: 50px;}
+p.padding2 {padding: 50px 100px;}
+p.padding3 {padding: 10px 20px 30px 40px;}
+p.padding4 {padding: auto;}

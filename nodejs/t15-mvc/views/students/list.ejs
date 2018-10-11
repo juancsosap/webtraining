@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<% include ../partials/head.ejs %>
+	</head>
+	<body>
+		<% include ../partials/banner.ejs %>
+		<div class="container">
+			<% if(error === '') { %>
+			<table class="table table-bordered">
+				<tr>
+					<% fields.forEach(function (field) { %>
+					<th><%= field %></th>
+					<% }); %>
+				</tr>
+				<% data.forEach(function (student) { %>
+				<tr>
+					<% fields.forEach(function (key) { %>
+					<td><%= student[key] %></td>
+					<% }); %>
+				</tr>
+				<% }); %>
+			</table>
+			<% } else { %>
+			<h3><%= error %></h3>
+			<% } %>
+		</div>
+	</body>
+</html>

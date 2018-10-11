@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Images - HTML Training</title>
+
+		<meta charset="utf-8" />
+		<base href="../" target="_self" />
+
+		<link rel="shortcut icon" type="image/x-icon" href="img/html5.png" />
+	</head>
+	<body>
+
+		<h1>Images</h1>
+		<img src="img/html5pagelayout.png" alt="HTML page Layout">
+		<img src="img/html5.png" width="200">
+		<img src="img/html5.png" width="200" height="400">
+		<img src="img/html5page.png" alt="HTML Page">
+
+		<br />
+
+		<h2>Image Maps</h2>
+		<p>Click on the elements of the image</p>
+
+		<img src="img/workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+
+		<map name="workmap">
+			<area shape="rect" coords="34,44,270,350"
+				alt="Computer" title="Computer App" href="https://www.facebook.com">
+			<area shape="rect" coords="290,172,333,250"
+				alt="Phone" title="Phone App" href="https://www.twitter.com">
+			<area shape="circle" coords="337,300,44"
+				alt="Cup of coffee" title="coffee App" href="https://www.oracle.com">
+		</map>
+
+		<h2>Picture</h2>
+		<picture>
+			<source media="(min-width: 650px)" srcset="img/html5.png">
+			<source media="(min-width: 465px)" srcset="img/html6.jpg">
+			<img src="img/html4.png" alt="HTML" title="HTML" width="400">
+		</picture>
+	</body>
+</html>

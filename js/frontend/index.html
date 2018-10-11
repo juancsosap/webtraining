@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<title>JS Training</title>
+		<script src="script.js"></script>
+	</head>
+	<body>
+		<h1>Bienvenido a Javascript</h1>
+		<p id="text">Antes</p>
+		<script> holamundo(); </script>
+		<h1>Hasta luego</h1>
+		
+		<br/>
+
+		<h1>Sintaxis JavaScript</h1>
+		<ul>
+			<li>Valores</li>
+			<ul>
+				<li>Literales</li>
+				<ul>
+					<li><script>document.write(10);</script></li>
+					<li><script>document.write(10.12);</script></li>
+					<li><script>document.write("Hi");</script></li>
+					<li><script>document.write('HI');</script></li>
+				</ul>
+
+				<li>Variables</li>
+				<ul>
+					<li>Variable no inicializadas tienen el valor 'undefined'</li>
+					<li>Declaraciones multiples separadas por coma, con inicialización de ser requerido</li>
+					<li><script>
+						var a = 5;
+						document.write(a);
+					</script></li>
+				</ul>
+			</ul>
+
+			<li>Operadores</li>
+			<ul>
+				<li>Aritmeticos</li>
+				<ul>
+					<li>+ - * / % ++ --</li>
+					<li>Concatenación de cadenas de caracteres con + y +=</li>
+					<li>Los numeros al sumarse con cadenas de caracteres son convertidos a cadenas</li>
+					<li><script>
+						var a1 = 5;
+						var a2 = 7;
+						document.write(a1 + a2);
+					</script></li>
+				</ul>
+				<li>Asignación</li>
+				<ul>
+					<li>= += -= *= /= %=</li>
+					<li><script>
+						var c1 = 5;
+						c1 += 7;
+						document.write(c1);
+					</script></li>
+				</ul>
+				<li>Comparación</li>
+				<ul>
+					<li>< > <= >= == === != !==</li>
+					<li>El operador == y != verifica solo valor, por lo que '5' == 5 se considera true</li>
+					<li>El operador === y !== verifica valor y tipo, por lo que '5' === 5 se considera false</li>
+					<li>Se puede hacer comparaciones con cadenas de caracteres y las mismas seran comparadas caracter a caracter segun su valor ASCII</li>
+					<li><script>
+						var b1 = 5, b2 = 7;
+						document.write(b1 < b2);
+					</script></li>
+					<li><script>
+						document.write('Juan' < 'Jose');
+					</script></li>
+				</ul>
+				<li>Logicos</li>
+				<ul>
+					<li>&& (AND), || (OR), ! (NOT)</li>
+					<li><script>
+						var x=1, y=2, z=3;
+						document.write(x < y && y<z);
+					</script></li>
+					<li><script>
+						document.write(x < y || y<z);
+					</script></li>
+					<li><script>
+						document.write(!(x < y));
+					</script></li>
+				</ul>
+				<li>Ternario</li>
+				<ul>
+					<li>(CONDICION) ? (TRUE) : (FALSE)</li>
+					<li><script>
+						var edad=15;
+						document.write(edad < 18 ? "MENOR" : "MAYOR");
+					</script></li>
+				</ul>
+				<li>Tipo</li>
+				<ul>
+					<li>typeof</li>
+					<li><script>
+						var string = "hola";
+						var number = 1234; //number
+						var decimal = 1.1234; //number
+						var exp = 1.1234e5 //number
+						var boolean = true;
+						var array = [1, '2', true]; //object
+						var object = {name: "Juan", age:36};
+						var date = new Date; //object
+						var func = function () {alert("");}; //function
+						var undef; //undefined
+						var empty = null; //object
+						
+						document.write(typeof func);
+					</script></li>
+					<li>instanceof</li>
+					<li><script>
+						document.write(array instanceof Array &&
+							           array instanceof Object);
+					</script></li>
+				</ul>
+			</ul>
+
+			<li>Expresiones</li>
+			<ul>
+				<li><script>
+					document.write("Hola" + 5);
+				</script></li>
+			</ul>
+			
+			<li>Palabras Reservadas</li>
+			<ul>
+				<li>if</li>
+				<li>else</li>
+				<li>break</li>
+				<li>continue</li>
+				<li>switch</li>
+				<li>do</li>
+				<li>while</li>
+				<li>for</li>
+				<li>debugger</li>
+				<li>try</li>
+				<li>catch</li>
+				<li>var</li>
+				<li>function</li>
+				<li>return</li>
+				<li>null</li>
+				<li>new</li>
+			</ul>
+
+			<li>Comentarios</li>
+			<ul>
+				<li>Lineal //</li>
+				<li>Multilinea /*  ... */</li>
+			</ul>
+
+			<li>Funciones</li>
+			<ul>
+				<li><script>
+					function saludosimple() {
+						alert("Hola");
+					}
+					saludosimple();
+
+					function saludopersonalizado(nombre) {
+						alert("Hola " + nombre);
+					}
+					saludopersonalizado("Juan");
+
+					function suma(a, b) {
+						return a + b;
+					}
+					alert(suma(3, 5));
+
+					alert(suma);
+
+					var myfun = function (data) { alert(data); };
+
+					myfun("Función Anonima");
+
+					var objfunc = new Function ("a", "b", "return a + b;");
+
+					alert(objfunc(5, 3));
+
+					( function () { alert("Función Auto-invocada") } () );
+
+					function multi (a, b) {
+						if (b === undefined) b = 1;
+						return a * b;
+					}
+
+					alert(multi(5));
+
+					function add () {
+						alert(arguments.length + " arguments");
+						var result = 0;
+						for (var i = 0; i < arguments.length; i++) {
+							result += arguments[i];
+						}
+						return result;
+					}
+
+					alert(add(1,2,3,4,5,6,7,8,9));
+				</script></li>
+			</ul>
+
+			<li>Sintaxis</li>
+			<ul>
+				<li>Punto y Coma al final (Opcional)</li>
+				<li>Varias sentencias en la misma linea separadas por Punto y Coma</li>
+				<li>Espacios en blanco extras se ignoran</li>
+				<li>Se soportan expresiones multilinea</li>
+				<li>Los bloques de codigo se agrupan entre {}</li>
+			</ul>
+			
+			<li>Identificadores</li>
+			<ul>
+				<li>$abcd12</li>
+				<li>abcd12</li>
+				<li>Abcd12</li>
+				<li>_abcd12</li>
+				<li>myVar1</li>
+				<li>my_var1</li>
+			</ul>
+	</body>
+</html>
