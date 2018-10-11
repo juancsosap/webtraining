@@ -9,64 +9,119 @@ describe('Testing AngularJS Test Suite', function () {
 		var $controller, $scope;
 		var _lssMock;
 
-		beforeEach(function () {
-			_lssMock = jasmine.createSpyObj('localStorageServiceMock',['set', 'get', 'remove']);
-			_lssMock.get.and.returnValue([{city: 'Iquique', country: 'Chile'}]);
+		describe('With localStorageServiceMock with data', function () {
 
-			module(['$provide', function ($provide) {
-				$provide.value('localStorageService', _lssMock);
-			}]);
+			beforeEach(function () {
+				_lssMock = jasmine.createSpyObj('localStorageServiceMock',['set', 'get', 'remove']);
+				_lssMock.get.and.returnValue([{city: 'Iquique', country: 'Chile'}]);
 
-			inject(['$controller', '$rootScope', function (_$controller_, _$rootScope_) {
-				$scope = _$rootScope_.$new();
-				$controller = _$controller_('ctrl', {'$scope': $scope});
-			}]);
+				module(['$provide', function ($provide) {
+					$provide.value('localStorageService', _lssMock);
+				}]);
+
+				inject(['$controller', '$rootScope', function (_$controller_, _$rootScope_) {
+					$scope = _$rootScope_.$new();
+					$controller = _$controller_('ctrl', {'$scope': $scope});
+				}]);
+			});
+
+			it('should initialize the msg in the scope', function () {
+				expect($scope.msg).toBeDefined();
+				expect($scope.msg).toBe('Unit Testing AngularJS');
+			});
+
+			it('should try to get the existing Destinations from the localStorage', function () {
+				expect($scope.destinations.length).toBe(1);
+				expect($scope.destinations[0].city).toEqual('Iquique');
+				expect($scope.destinations[0].country).toEqual('Chile');
+			});
+
+			it('should add new Destinations in the scope', function () {
+				$scope.newDestination = {city: 'Lima', country: 'Peru'};
+				$scope.addDestination();
+				expect($scope.destinations.length).toBe(2);
+				expect($scope.destinations[0].city).toEqual('Iquique');
+				expect($scope.destinations[0].country).toEqual('Chile');
+				expect($scope.destinations[1].city).toEqual('Lima');
+				expect($scope.destinations[1].country).toEqual('Peru');
+			});
+
+			it('should try to storage the new Destinations in the localStorage', function () {
+				$scope.newDestination = {city: 'Lima', country: 'Peru'};
+				$scope.addDestination();
+
+				expect(_lssMock.set).toHaveBeenCalled();
+				expect(_lssMock.set).toHaveBeenCalledWith('trip-storage',[{city: 'Iquique', country: 'Chile'},
+																																	{city: 'Lima', country: 'Peru'}]);
+
+				$scope.newDestination = {city: 'Bogota', country: 'Colombia'};
+				$scope.addDestination();
+
+				expect(_lssMock.set.calls.count()).toBe(2);
+			});
+
+			it('should try to clean the localStorage', function () {
+				$scope.clean();
+
+				expect($scope.destinations).toEqual([]);
+				expect(_lssMock.remove).toHaveBeenCalled();
+				expect(_lssMock.remove).toHaveBeenCalledWith('trip-storage');
+			});
+
 		});
 
-		it('should initialize the msg in the scope', function () {
-			expect($scope.msg).toBeDefined();
-			expect($scope.msg).toBe('Unit Testing AngularJS');
-		});
+		describe('With localStorageServiceMock with no data', function () {
 
-		it('should try to get the existing Destinations from the localStorage', function () {
-			expect($scope.destinations.length).toBe(1);
-			expect($scope.destinations[0].city).toEqual('Iquique');
-			expect($scope.destinations[0].country).toEqual('Chile');
-		});
+			beforeEach(function () {
+				_lssMock = jasmine.createSpyObj('localStorageServiceMock',['set', 'get', 'remove']);
+				_lssMock.get.and.returnValue(null);
 
-		it('should add new Destinations in the scope', function () {
-			$scope.newDestination = {city: 'Lima', country: 'Peru'};
-			$scope.addDestination();
-			expect($scope.destinations.length).toBe(2);
-			expect($scope.destinations[0].city).toEqual('Iquique');
-			expect($scope.destinations[0].country).toEqual('Chile');
-			expect($scope.destinations[1].city).toEqual('Lima');
-			expect($scope.destinations[1].country).toEqual('Peru');
-		});
+				module(['$provide', function ($provide) {
+					$provide.value('localStorageService', _lssMock);
+				}]);
+				
+				inject(['$controller', '$rootScope', function (_$controller_, _$rootScope_) {
+					$scope = _$rootScope_.$new();
+					$controller = _$controller_('ctrl', {'$scope': $scope});
+				}]);
+			});
 
-		it('should try to storage the new Destinations in the localStorage', function () {
-			_lssMock.set.calls.reset();
+			it('should try to get the existing Destinations from the localStorage', function () {
+				expect($scope.destinations.length).toBe(0);
+			});
 
-			$scope.newDestination = {city: 'Lima', country: 'Peru'};
-			$scope.addDestination();
+			it('should add new Destinations in the scope', function () {
+				$scope.newDestination = {city: 'Lima', country: 'Peru'};
+				$scope.addDestination();
+				expect($scope.destinations.length).toBe(1);
+				expect($scope.destinations[0].city).toEqual('Lima');
+				expect($scope.destinations[0].country).toEqual('Peru');
+			});
 
-			expect(_lssMock.set).toHaveBeenCalled();
-			expect(_lssMock.set).toHaveBeenCalledWith('trip-storage',[{city: 'Iquique', country: 'Chile'},
-																																{city: 'Lima', country: 'Peru'}]);
+			it('should try to storage the new Destinations in the localStorage', function () {
+				_lssMock.set.calls.reset();
 
-			$scope.newDestination = {city: 'Bogota', country: 'Colombia'};
-			$scope.addDestination();
+				$scope.newDestination = {city: 'Lima', country: 'Peru'};
+				$scope.addDestination();
 
-			expect(_lssMock.set.calls.count()).toBe(2);
-		});
+				expect(_lssMock.set).toHaveBeenCalled();
+				expect(_lssMock.set).toHaveBeenCalledWith('trip-storage',[{city: 'Lima', country: 'Peru'}]);
 
-		it('should try to clean the localStorage', function () {
-			_lssMock.remove.calls.reset();
+				$scope.newDestination = {city: 'Bogota', country: 'Colombia'};
+				$scope.addDestination();
 
-			$scope.clean();
+				expect(_lssMock.set.calls.count()).toBe(2);
+			});
 
-			expect(_lssMock.remove).toHaveBeenCalled();
-			expect(_lssMock.remove).toHaveBeenCalledWith('trip-storage');
+			it('should try to clean the localStorage', function () {
+				_lssMock.remove.calls.reset();
+
+				$scope.clean();
+
+				expect(_lssMock.remove).toHaveBeenCalled();
+				expect(_lssMock.remove).toHaveBeenCalledWith('trip-storage');
+			});
+
 		});
 
 	});

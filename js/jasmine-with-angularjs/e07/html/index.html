@@ -6,6 +6,7 @@
 		<script src="../../node_modules/angular-local-storage/src/angular-local-storage.js"></script>
 		<script src="../js/ctrl.js"></script>
 		<script src="../js/svc.js"></script>
+		<script src="../js/filter.js"></script>
 		<title>AgularJS Unit Testing Training</title>
 	</head>
 	<body ng-app="app">
@@ -32,7 +33,7 @@
 				</h2>
 				<ol>
 					<li ng-repeat="destination in destinations">
-						<span>{{ destination.city }}, {{ destination.country }}</span>
+						<span>{{ destination.city | capitalize }}, {{ destination.country | capitalize }}</span>
 					</li>
 				</ol>
 			</section>

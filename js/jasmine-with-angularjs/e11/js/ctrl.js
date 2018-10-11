@@ -1,7 +1,7 @@
 var app = angular.module('app', ['LocalStorageModule']);
 
 app.controller('ctrl', ['$scope', 'localStorageService', 'countriesService',
-	function ($scope, _lss, _contriesSvc) {
+	function ($scope, _lss, _countriesSvc) {
 		$scope.msg = 'Unit Testing AngularJS';
 
 		var storage = 'trip-storage';
@@ -10,7 +10,9 @@ app.controller('ctrl', ['$scope', 'localStorageService', 'countriesService',
 
 		$scope.newDestination = {};
 
-		$scope.countries = _contriesSvc.getAll();
+		_countriesSvc.getAll(function (result) {
+			$scope.countries = result;
+		});
 
 		$scope.addDestination = function () {
 			$scope.destinations.push($scope.newDestination);
