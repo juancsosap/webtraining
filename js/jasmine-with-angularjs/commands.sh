@@ -27,6 +27,9 @@ sudo npm install -g karma-firefox-launcher
 # Install Jasmine module over Node.js Globally
 sudo npm install -g jasmine jasmine-core karma-jasmine
 
+# Install Karma Tools
+sudo npm install karma-ng-html2js-preprocessor -g
+
 # Initialize Karma
 cd e01/js/test
 karma init

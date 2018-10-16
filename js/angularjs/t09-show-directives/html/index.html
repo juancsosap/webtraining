@@ -5,20 +5,22 @@
 		<meta charset="utf-8">
 		<base href="../" target="_self" />
 		<link rel="shortcut icon" type="image/x-icon" href="../img/angular.svg" />
-		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.min.css">
+		<script type="text/javascript" src="../lib/angular/angular.min.js"></script>
 		<script type="text/javascript" src="js/ctrl.js"></script>
 	</head>
 	<body ng-controller="AppController">
 
-		<div class="jumbotron">
-			<h1>{{ title }}</h1>
-			<p>
-				Created by {{ author.name }} {{ author.surname }} on {{ year }}.
-			</p>
-		</div>
+		<header class="jumbotron">
+			<div class="container">
+				<h1>{{ title }}</h1>
+				<p>
+					Created by {{ author.name }} {{ author.surname }} on {{ year }}.
+				</p>
+			</div>
+		</header>
 
-		<div class="container">
+		<section class="container">
 			<h2>
 				Other Trainings
 				<input type="button" value="Show" ng-click="showList = true" ng-hide="showList" class="form-control col-md-2 float-right" />
@@ -27,11 +29,18 @@
 			<ul ng-show="showList" ng-cloak>
 				<li ng-repeat="training in trainings">{{ training }}</li>
 			</ul>
-		</div>
+		</section>
 
-		<div class="container">
+		<section class="container">
 			<img ng-src="{{ imgPath }}" />
-		</div>
+		</section>
+
+		<section class="container">
+			<hr/>
+			<select ng-model="selected" ng-options="training for training in trainings"></select>
+			<img ng-src="{{ imgPath }}" ng-if="selected == 'JavaScript'"/>
+			<hr/>
+		</section>
 
 	</body>
 </html>

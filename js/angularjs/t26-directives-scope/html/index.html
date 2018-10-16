@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="AppModule" ng-controller="AppController">
+	<head>
+		<title cng-as-title></title>
+		<meta charset="utf-8">
+		<base href="../" target="_self" />
+		<link rel="shortcut icon" type="image/x-icon" href="../img/angular.svg" />
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.min.css">
+		<script type="text/javascript" src="../lib/angular/angular.min.js"></script>
+		<script type="text/javascript" src="js/ctrl.js"></script>
+		<script type="text/javascript" src="js/directives.js"></script>
+	</head>
+	<body>
+
+		<header cng-with-info></header>
+
+		<section class="container" cng-message1="Share Scope"></section>
+		<section class="container" cng-message2="Child Scope"></section>
+		<section class="container" cng-message3 msg="Isolated Scope - @ Same Name"></section>
+		<section class="container" cng-message4 message="Isolated Scope - @ Different Name"></section>
+		<section class="container" cng-message4 message="Isolated Scope - @ Interpolated - {{ author.name }}"></section>
+		<section class="container" cng-message5 message="Isolated Scope - @ Different Name - Controller"></section>
+		<section class="container" cng-message6 obj="info1"></section>
+		<section class="container" cng-message7 message="info2"></section>
+		<section class="container" cng-message8 func="alert1"></section>
+		<section class="container" cng-message9 message="alert2"></section>
+		<section class="container" cng-message10 message="alert0(msg)"></section>
+		<section class="container" cng-message11 message="alert0(msg)"></section>
+		<section class="container" cng-message12></section>
+
+	</body>
+</html>

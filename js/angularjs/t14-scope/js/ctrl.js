@@ -46,3 +46,16 @@ var ctrl3 = function ($scope, $rootScope) {
 };
 
 app.controller("AppController3", ctrl3);
+
+var ctrl4 = function ($scope) {
+
+	$scope.value = 'ctrl4Value';
+  $scope.level = 'ctrl4';
+
+	$scope.changeValue = function () {
+		$scope.$parent.value = 'ctrl4ValueFromParent';
+	};
+
+};
+
+app.controller("AppController4", ctrl4);

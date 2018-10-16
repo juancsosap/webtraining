@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8">
+		<base href="../" target="_self" />
+		<script src="../node_modules/angular/angular.min.js"></script>
+		<script src="../node_modules/angular-local-storage/src/angular-local-storage.js"></script>
+		<script src="js/ctrl.js"></script>
+		<script src="js/svc.js"></script>
+		<script src="js/filter.js"></script>
+		<script src="js/directives.js"></script>
+		<title>AgularJS Unit Testing Training</title>
+	</head>
+	<body ng-app="app">
+		<div ng-controller="ctrl">
+			<header>
+				<h1>{{ msg }}</h1>
+			</header>
+			<section>
+				<form ng-submit="addDestination()">
+					<label for="country">Country:</label>
+					<input name="country" type="text"  list="countries" ng-model="newDestination.country" />
+					<datalist id="countries">
+						<option ng-repeat="country in countries" value="{{ country }}" />
+					</datalist>
+					<label for="city">City:</label>
+					<input name="city" type="text" ng-model="newDestination.city" />
+					<input type="submit" value="Add" />
+				</form>
+			</section>
+			<section>
+				<h2 ng-if="destinations.length > 0">
+					<span cng-title></span>
+					<span cng-clean-button></span>
+				</h2>
+				<ol>
+					<li ng-repeat="destination in destinations">
+						<span cng-csv-data="destination"></span>
+					</li>
+				</ol>
+			</section>
+		</div>
+	</body>
+</html>

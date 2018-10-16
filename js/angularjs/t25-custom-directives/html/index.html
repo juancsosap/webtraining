@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html ng-app="AppModule" ng-controller="AppController">
 	<head>
-		<title as-title></title>
+		<title cng-as-title></title>
 		<meta charset="utf-8">
 		<base href="../" target="_self" />
 		<link rel="shortcut icon" type="image/x-icon" href="../img/angular.svg" />
-		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.min.css">
+		<script type="text/javascript" src="../lib/angular/angular.min.js"></script>
 		<script type="text/javascript" src="js/ctrl.js"></script>
 		<script type="text/javascript" src="js/svc.js"></script>
 		<script type="text/javascript" src="js/directives.js"></script>
 	</head>
 	<body>
 
-		<div with-info></div>
+		<header cng-with-info></header>
 
-		<div class="container">
+		<section class="container">
 			<div ng-if="data.length>0">
-				<div with-table></div>
+				<div cng-with-table cng-table-name="header" cng-table-fields="fields" cng-table-data="data"></div>
 			</div>
 			<div ng-if="!data">
-				<h4 class="text-primary" with-loading="No data Available"></h4>
+				<h4 class="text-primary" cng-with-loading="No data Available"></h4>
 			</div>
-		</div>
+			<hr />
+		</section>
+
+		<section>
+			<cng-test-directives text="root" ng-show="false">
+				<cng-test-directives text="level 0">
+					<cng-test-directives text="level {{ i }}" ng-repeat="i in [1,2,3]">
+						Message: level {{ i }}
+					</cng-test-directives>
+				</cng-test-directives>
+			</cng-test-directives>
+		</section>
 
 	</body>
 </html>

@@ -1,5 +1,5 @@
 			<h2>
-				{{ header }}
+				{{ cngTable.header }}
 				<div class="btn-group float-right col-md-2">
 					<input type="button" ng-click="page=page-1" ng-disabled="page<=1"
 						value="prev" class="btn btn-sm btn-default col-md-6" />
@@ -10,9 +10,9 @@
 
 			<table class="table table-bordered" ng-init="page=1;step=10;">
 				<tr>
-					<th ng-repeat="field in fields">{{ field }}</th>
+					<th ng-repeat="field in cngTable.fields">{{ field }}</th>
 				</tr>
-				<tr ng-repeat="row in data | limitTo: step : (page-1)*step">
+				<tr ng-repeat="row in cngTable.data | limitTo: step : (page-1)*step">
 					<td ng-repeat="info in row">{{ info }}</td>
 				</tr>
 			</table>

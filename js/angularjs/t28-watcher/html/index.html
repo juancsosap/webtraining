@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html ng-app="AppModule" ng-controller="AppController">
+	<head>
+		<title>{{ title }}</title>
+		<meta charset="utf-8">
+		<base href="../" target="_self" />
+		<link rel="shortcut icon" type="image/x-icon" href="../img/angular.svg" />
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.min.css">
+		<script type="text/javascript" src="../lib/angular/angular.min.js"></script>
+		<script type="text/javascript" src="js/ctrl.js"></script>
+	</head>
+	<body>
+
+		<header class="jumbotron">
+			<div class="container">
+				<h1>{{ title }}</h1>
+				<p>
+					Created by {{ author.name }} {{ author.surname }} on {{ year }}.
+				</p>
+			</div>
+		</header>
+
+		<section class="container">
+			<label>N0:</label>
+			<input name="n01" type="number" ng-model="n[0][1]" ng-change="update0()" />
+			<input name="n02" type="number" ng-model="n[0][2]" ng-change="update0()" />
+			<input name="n00" type="number" ng-model="n[0][0]" disabled />
+		</section>
+
+		<section class="container">
+			<label>N1:</label>
+			<input name="n11" type="number" ng-model="n[1][1]" />
+			<input name="n12" type="number" ng-model="n[1][2]" />
+			<input name="n10" type="number" ng-model="n[1][0]" disabled />
+		</section>
+
+		<section class="container">
+			<label>N2:</label>
+			<input name="n21" type="number" ng-model="n[2].n1" />
+			<input name="n22" type="number" ng-model="n[2].n2" />
+			<input name="n20" type="number" ng-model="n[2].n0" disabled />
+		</section>
+
+		<section class="container">
+			<label>N3:</label>
+			<input name="n31" type="number" ng-model="n[3].n1" />
+			<input name="n32" type="number" ng-model="n[3].n2" />
+			<input name="n30" type="number" ng-model="n[3].n0" disabled />
+		</section>
+
+		<section class="container">
+			<label>N4:</label>
+			<input name="n41" type="number" ng-model="n[4][1]" />
+			<input name="n42" type="number" ng-model="n[4][2]" />
+			<input name="n40" type="number" ng-model="n[4][0]" disabled />
+		</section>
+
+		<section class="container">
+			<label>N5:</label>
+			<input name="n51" type="number" ng-model="n[5][1]" />
+			<input name="n52" type="number" ng-model="n[5][2]" />
+			<input name="n50" type="number" ng-model="n[5][0]" disabled />
+		</section>
+
+		<section class="container">
+			<label>N6:</label>
+			<input name="n61" type="number" ng-model="n[6][1].v" />
+			<input name="n62" type="number" ng-model="n[6][2].v" />
+			<input name="n60" type="number" ng-model="n[6][0].v" disabled />
+		</section>
+
+	</body>
+</html>

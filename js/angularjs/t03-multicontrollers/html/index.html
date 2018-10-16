@@ -11,20 +11,22 @@
 	</head>
 	<body>
 
-		<div ng-controller="AppController0" class="jumbotron">
-			<h1>{{ msg }}</h1>
-			<p>
-				Created by {{ author }} on {{ year }}.
-			</p>
-		</div>
+		<header ng-controller="AppController0" class="jumbotron">
+			<div class="container">
+				<h1>{{ msg }}</h1>
+				<p>
+					Created by {{ author }} on {{ year }}.
+				</p>
+			</div>
+		</header>
 
-		<div ng-controller="AppController1 as obj1" class="container">
+		<section ng-controller="AppController1 as obj1" class="container">
 			<h2>{{ obj1.info }}</h2>
-		</div>
+		</section>
 
-		<div ng-controller="AppController2" class="container">
+		<section ng-controller="AppController2" class="container">
 			<h2>{{ obj2.info }}</h2>
-		</div>
+		</section>
 
 	</body>
 </html>

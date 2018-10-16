@@ -5,38 +5,75 @@
 		<meta charset="utf-8">
 		<base href="../" target="_self" />
 		<link rel="shortcut icon" type="image/x-icon" href="../img/angular.svg" />
-		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.min.css">
+		<script type="text/javascript" src="../lib/angular/angular.min.js"></script>
 		<script type="text/javascript" src="js/ctrl.js"></script>
 	</head>
 	<body>
 
 		<div ng-controller="AppController1">
-			<div class="jumbotron">
-				<h1>{{ title }}</h1>
-				<p>
-					Created by {{ author.name }} {{ author.surname }} on {{ year }}.
-				</p>
-			</div>
+
+			<header class="jumbotron">
+				<div class="container">
+					<h1>{{ title }}</h1>
+					<p>
+						Created by {{ author.name }} {{ author.surname }} on {{ year }}.
+					</p>
+				</div>
+			</header>
+
 		</div>
 
-		<div class="container">
-			<h2>VALUE: {{ value }}, LEVEL: {{ level }}, BEFORE</h2>
-			<div ng-controller="AppController1">
-				<h2>VALUE: {{ value }}, LEVEL: {{ level }}, BEFORE</h2>
-				<div ng-controller="AppController2">
-					<h2>VALUE: {{ value }}, LEVEL: {{ level }}</h2>
+		<section class="container">
+			<hr/>
+			<h2 class="text-primary">ROOT LEVEL : BEFORE</h2>
+			<h3> >>> [this] VALUE: {{ value }}, LEVEL: {{ level }}</h3>
+			<h3> >>> [parent] VALUE: {{ $parent.value }}, LEVEL: {{ $parent.level }}</h3>
+			<div ng-controller="AppController1" class="container">
+				<hr/>
+				<h3 class="text-primary">LEVEL CTRL1 : BEFORE</h3>
+				<h4> >>> [this] VALUE: {{ value }}, LEVEL: {{ level }}</h4>
+				<h4> >>> [parent] VALUE: {{ $parent.value }}, LEVEL: {{ $parent.level }}</h4>
+				<div ng-controller="AppController2" class="container">
+					<hr/>
+					<h4 class="text-primary">LEVEL CTRL2</h4>
+					<h5> >>> [this] VALUE: {{ value }}, LEVEL: {{ level }}</h5>
+					<h5> >>> [parent] VALUE: {{ $parent.value }}, LEVEL: {{ $parent.level }}</h5>
+					<hr/>
 				</div>
-				<h2>VALUE: {{ value }}, LEVEL: {{ level }}, AFTER</h2>
-				<div ng-controller="AppController3">
-					<h2>VALUE: {{ value }}, LEVEL: {{ level }}</h2>
-					<input type="button" ng-click="changeValue()" value="Change Value in Controller 3" />
+				<h3 class="text-primary">LEVEL CTRL1 : AFTER</h3>
+				<h4> >>> [this] VALUE: {{ value }}, LEVEL: {{ level }}</h4>
+				<h4> >>> [parent] VALUE: {{ $parent.value }}, LEVEL: {{ $parent.level }}</h4>
+				<hr/>
+				<div ng-controller="AppController3" class="container">
+					<h4 class="text-primary">LEVEL CTRL3</h4>
+					<h5> >>> [this] VALUE: {{ value }}, LEVEL: {{ level }}</h5>
+					<h5> >>> [parent] VALUE: {{ $parent.value }}, LEVEL: {{ $parent.level }}</h5>
+					<input type="button" ng-click="changeValue()" value="Change Root Value in Controller 3" />
+					<hr/>
 				</div>
-				<h2>VALUE: {{ value }}, LEVEL: {{ level }}, AFTER</h2>
+				<h3 class="text-primary">LEVEL CTRL1 : AFTER</h3>
+				<h4> >>> [this] VALUE: {{ value }}, LEVEL: {{ level }}</h4>
+				<h4> >>> [parent] VALUE: {{ $parent.value }}, LEVEL: {{ $parent.level }}</h4>
+				<hr/>
+				<div ng-controller="AppController4" class="container">
+					<h4 class="text-primary">LEVEL CTRL4</h4>
+					<h5> >>> [this] VALUE: {{ value }}, LEVEL: {{ level }}</h5>
+					<h5> >>> [parent] VALUE: {{ $parent.value }}, LEVEL: {{ $parent.level }}</h5>
+					<input type="button" ng-click="changeValue()" value="Change Parent Value in Controller 4" />
+					<hr/>
+				</div>
+				<h3 class="text-primary">LEVEL CTRL1 : AFTER</h3>
+				<h4> >>> [this] VALUE: {{ value }}, LEVEL: {{ level }}</h4>
+				<h4> >>> [parent] VALUE: {{ $parent.value }}, LEVEL: {{ $parent.level }}</h4>
+				<hr/>
 			</div>
-			<h2>VALUE: {{ value }}, LEVEL: {{ level }}, AFTER</h2>
-			<input type="button" ng-click="value='rootValueAgain'" value="Change Value in Root" />
-		</div>
+			<h2 class="text-primary">ROOT LEVEL : AFTER</h2>
+			<h3> >>> [this] VALUE: {{ value }}, LEVEL: {{ level }}</h3>
+			<h3> >>> [parent] VALUE: {{ $parent.value }}, LEVEL: {{ $parent.level }}</h3>
+			<input type="button" ng-click="value='rootValueAgain'" value="Change Root Value in Root" />
+			<hr/>
+		</section>
 
 	</body>
 </html>

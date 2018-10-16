@@ -5,32 +5,34 @@
 		<meta charset="utf-8">
 		<base href="../" target="_self" />
 		<link rel="shortcut icon" type="image/x-icon" href="../img/angular.svg" />
-		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
-		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.min.css">
+		<script type="text/javascript" src="../lib/angular/angular.min.js"></script>
 		<script type="text/javascript" src="js/ctrl.js"></script>
 	</head>
 	<body>
 
 		<div ng-app="AppModule">
-			<div ng-controller="AppController0" class="jumbotron">
-				<h1>{{ msg }}</h1>
-				<p>
-					Created by {{ author }} on {{ year }}.
-				</p>
-			</div>
+			<header ng-controller="AppController0" class="jumbotron">
+				<div class="container">
+					<h1>{{ msg }}</h1>
+					<p>
+						Created by {{ author }} on {{ year }}.
+					</p>
+				</div>
+			</header>
 
-			<div ng-controller="AppController0" class="container">
+			<section ng-controller="AppController0" class="container">
 				<h2>Info from Controller 0 : {{ info0 }}</h2>
-			</div>
+			</section>
 
-			<div ng-controller="AppController1" class="container">
+			<section ng-controller="AppController1" class="container">
 				<h2>Info from Controller 1 : {{ info1 }}</h2>
-			</div>
+			</section>
 		</div>
 
-		<div ng-controller="AppController2" class="container">
+		<section ng-controller="AppController2" class="container">
 			<h2>Info from Controller 2 : {{ info2 }}</h2>
-		</div>
+		</section>
 
 	</body>
 </html>

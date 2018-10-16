@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="AppModule" ng-controller="AppController">
+	<head>
+		<title>{{ title }}</title>
+		<meta charset="utf-8">
+		<base href="../" target="_self" />
+		<link rel="shortcut icon" type="image/x-icon" href="../img/angular.svg" />
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.min.css">
+		<script type="text/javascript" src="../lib/angular/angular.min.js"></script>
+		<script type="text/javascript" src="js/ctrl.js"></script>
+		<script type="text/javascript" src="js/directives.js"></script>
+	</head>
+	<body>
+
+		<header class="jumbotron">
+			<div class="container">
+				<h1>{{ title }}</h1>
+				<p>
+					Created by {{ author.name }} {{ author.surname }} on {{ year }}.
+				</p>
+			</div>
+		</header>
+
+		<hr/>
+
+		<section>
+			<div class="container">
+				<span cng-fail></span>
+			</div>
+		</section>
+
+		<hr/>
+
+		<section>
+			<div class="container">
+				<span cng-eval></span>
+			</div>
+		</section>
+
+		<hr/>
+
+		<section>
+			<div class="container">
+				<span cng-parse></span>
+			</div>
+		</section>
+
+		<hr/>
+
+		<section>
+			<div class="container">
+				<span cng-interpolate></span>
+			</div>
+		</section>
+
+		<hr/>
+
+	</body>
+</html>

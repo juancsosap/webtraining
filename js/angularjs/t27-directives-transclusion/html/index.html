@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="AppModule" ng-controller="AppController">
+	<head>
+		<title cng-as-title></title>
+		<meta charset="utf-8">
+		<base href="../" target="_self" />
+		<link rel="shortcut icon" type="image/x-icon" href="../img/angular.svg" />
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.min.css">
+		<script type="text/javascript" src="../lib/jquery/jquery-3.3.1.min.js"></script>
+		<script type="text/javascript" src="../lib/angular/angular.min.js"></script>
+		<script type="text/javascript" src="js/ctrl.js"></script>
+		<script type="text/javascript" src="js/directives.js"></script>
+	</head>
+	<body>
+
+		<header cng-with-info></header>
+
+		<section class="container">
+			<h2 class="text-success">This is the controller Message</h>
+		</section>
+
+		<section class="container" cng-message1="This is the template Message 1">
+			<h4>This is the transclude Message 1</h4>
+		</section>
+
+		<section class="container" cng-message2="This is the template Message 2">
+			<h4>This is the transclude Message 2</h4>
+		</section>
+
+		<section class="container" cng-message3="This is the template Message 3">
+			<h4>This is the transclude Message 3</h4>
+		</section>
+
+		<section class="container" cng-message4="This is the template Message 4">
+			<h4>This is the transclude Message 4</h4>
+		</section>
+
+		<section class="container" cng-message5="This is the template Message 5">
+			<h4>This is the transclude Message 5</h4>
+		</section>
+
+		<section class="container" cng-message6="This is the template Message 6">
+			<h4>This is the transclude Message 6</h4>
+		</section>
+
+		<section class="container" cng-message7="This is the template Message 7">
+			<h4>This is the transclude Message 7</h4>
+		</section>
+
+		<section class="container" cng-message8="This is the template Message 8">
+			<h4>{{ msg }}</h4>
+		</section>
+
+		<section class="container" cng-message9="This is the template Message 9">
+			<h4>{{ msg }}</h4>
+		</section>
+
+	</body>
+</html>

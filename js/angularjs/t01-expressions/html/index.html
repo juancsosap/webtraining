@@ -10,12 +10,14 @@
 	</head>
 	<body ng-init="msg = 'Expressions - AngularJS'">
 
-		<div class="jumbotron">
-			<h1>{{ msg }}</h1>
-			<p ng-init="year = 2018">
-				Created on {{ year }} after {{ year - 2014 }} year of release AngularJS.
-			</p>
-		</div>
+		<header class="jumbotron">
+			<div class="container">
+				<h1>{{ msg }}</h1>
+				<p>
+					Created on {{ year }} after {{ year - 2014 }} year of release AngularJS.
+				</p>
+			</div>
+		</header>
 
 	</body>
 </html>

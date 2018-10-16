@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html ng-app="AppModule" ng-controller="AppController">
+	<head>
+		<title>{{ title }}</title>
+		<meta charset="utf-8">
+		<base href="../" target="_self" />
+		<link rel="shortcut icon" type="image/x-icon" href="../img/angular.svg" />
+		<link rel="stylesheet" type="text/css" href="../lib/bootstrap/css/bootstrap.min.css">
+		<script type="text/javascript" src="../lib/angular/angular.min.js"></script>
+		<script type="text/javascript" src="js/ctrl.js"></script>
+	</head>
+	<body>
+
+		<header class="jumbotron">
+			<div class="container">
+				<h1>{{ title }}</h1>
+				<p>
+					Created by {{ author.name }} {{ author.surname }} on {{ year }}.
+				</p>
+			</div>
+		</header>
+
+		<section class="container">
+			<label>N1:</label>
+			<input type="number" ng-model="n1" id="n1" />
+			<input type="number" ng-model="n1" disabled />
+		</section>
+
+		<section class="container">
+			<label>N2:</label>
+			<input type="number" ng-model="n2" id="n2" />
+			<input type="number" ng-model="n2" disabled />
+		</section>
+
+		<section class="container">
+			<label>N3:</label>
+			<input type="number" ng-model="n3" id="n3" />
+			<input type="number" ng-model="n3" disabled />
+		</section>
+
+		<section class="container">
+			<input type="button" value="JS Reset" onclick="reset()"/>
+		</section>
+
+		<section class="container">
+			<input type="button" value="AngularJS Reset" ng-click="reset()"/>
+		</section>
+
+		<section class="container">
+			<input type="button" value="AngularJS Manual Reset" onclick="manualReset()"/>
+		</section>
+
+		<section class="container" ng-controller="AppController0" id="ctrl0">
+			<label>C0:</label>
+			<input type="number" ng-model="c0" id="c0" />
+			<input type="number" ng-model="c0" disabled />
+			<input type="button" value="Reset" onclick="resetC0()"/>
+		</section>
+
+		<section class="container" ng-controller="AppController1" id="ctrl1">
+			<label>C1:</label>
+			<input type="number" ng-model="c1" id="c1" />
+			<input type="number" ng-model="c1" disabled />
+			<input type="button" value="Reset" onclick="resetC1()"/>
+		</section>
+
+		<section class="container" ng-controller="AppController2" id="ctrl2">
+			<label>C2:</label>
+			<input type="number" ng-model="c2" id="c2" />
+			<input type="number" ng-model="c2" disabled />
+			<input type="button" value="Reset" onclick="resetC2()"/>
+		</section>
+
+	</body>
+</html>
