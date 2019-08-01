@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="mainApp">
+	<head>
+		<title>Servicios - Cabañas El Toro - Radal Siete Tazas</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
+
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+
+		<script type="text/javascript" src="js/ctrl.js"></script>
+		<script type="text/javascript" src="js/directive.js"></script>
+	</head>
+	<body ng-controller="mainCtrl" style="visibility: hidden">
+		<cng-import-css></cng-import-css>
+
+		<header cng-navbar="services"></header>
+
+		<!--
+		<section>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="img-fluid d-block w-100" src="gallery/bolson/img13.jpg" alt="cabañas">
+					<div class="carousel-caption">
+						<h1>Para acercarte a la bella Naturaleza</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+	  -->
+
+		<section id="banner" class="container-fluid mt-4">
+			<div class="row jumbotron">
+				<div class="col-12">
+					<h1 class="display-4">Acceso cercano a muchas comodidades</h1>
+					<h3 class="text-justify">Junto con la estadía en nuestras cabañas, nuestros inquilinos tienen facil acceso a todas las atracciones naturales que ofrece el Parque Nacional Radal Siete Tazas, sin dejar de lado la comodidad.</h3>
+					<h3 class="text-justify">Además, nuestras cabañas tienen una ubicación privilegiada, con facil acceso a las atracciones más importantes y sitios de interes que te otorgan flexibilidad para disfrutar al máximo la experiencia.</h3>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		<section id="huts" class="container-fluid">
+			<div class="card-deck row justify-content-center align-items-center">
+				<div id="bike" class="content-center" cng-card-gallery="bike" cng-max="2">
+					<h4 class="card-title">Arriendo de Bicicletas</h4>
+					<p class="text-justify">Ofrecemos bicicletas montañeras para aquellos que quieran disfrutar de la naturaleza y la aventura sobre ruedas.</p>
+					<ul class="unstyled col-sm-12">
+						<div cng-item="5 Bicicletas Montañeras para toda la familia" cng-icon="fa fa-bicycle"></div>
+						<div cng-item="Equipos de protección personal y reflectantes" cng-icon="fa fa-get-pocket"></div>
+						<div cng-item="Silla para niños disponible" cng-icon="fa fa-child"></div>
+						<hr>
+						<div cng-item="5.000 CLP por todo el dia" cng-icon="fa fa-money"></div>
+						<br><br><br><br><br><br>
+					</ul>
+				</div>
+				<div id="trekking" class="content-center" cng-card-gallery="trekking" cng-max="26">
+					<h4 class="card-title">Trekking Guiado</h4>
+					<p class="text-justify">Visita el parque nacional Radal Siete Tazas desde una perspectiva diferente, conociendo de cerca los lugares más hermosos de la zona</p>
+					<ul class="unstyled col-sm-12">
+						<div cng-item="Aventura por rutas de diferente duración segun las necesidades del cliente" cng-icon="fa fa-safari"></div>
+						<div cng-item="Incluye colación de frutos secos y bebidas hidratantes" cng-icon="fa fa-shopping-basket"></div>
+						<hr>
+						<div cng-item="35.000 CLP por dia por persona" cng-icon="fa fa-money"></div>
+						<div cng-item="Mínimo 5 personas" cng-icon="fa fa-child"></div>
+						<div cng-item="Requiere confirmación previa a la reserva" cng-icon="fa fa-hourglass"></div>
+						<div cng-item="Servicio solo disponible en Verano y Primavera" cng-icon="fa fa-exclamation-circle"></div>
+					</ul>
+				</div>
+				<div id="canopi" class="content-center" cng-card-gallery="canopi" cng-max="4">
+					<h4 class="card-title">Canopi / Tirolesa</h4>
+					<p class="text-justify">Divertida experiencia de salto en altura y a gran velocidad</p>
+					<ul class="unstyled col-sm-12">
+						<div cng-item="Divertido trayecto con 3 saltos" cng-icon="fa fa-binoculars"></div>
+						<div cng-item="Equipo de protección personal" cng-icon="fa fa-get-pocket"></div>
+						<div cng-item="Salto acompañado para niños menores de 7 años" cng-icon="fa fa-child"></div>
+						<hr>
+						<div cng-item="6.000 CLP por persona" cng-icon="fa fa-money"></div>
+						<div cng-item="Disponible de 11:00 a 19:00 horas excepto los Sabados" cng-icon="fa fa-hourglass"></div>
+						<div cng-item="Servicio solo disponible en Verano y Primavera" cng-icon="fa fa-exclamation-circle"></div>
+					</ul>
+					<br><br><br>
+				</div>
+			</div>
+		</section>
+
+		<footer class="page-footer" cng-footer></footer>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="lib/lightbox2/lightbox-plus-jquery.min.js"></script>
+	</body>
+</html>

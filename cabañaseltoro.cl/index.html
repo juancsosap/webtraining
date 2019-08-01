@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="mainApp">
+	<head>
+		<title>Inicio - Cabañas El Toro - Radal Siete Tazas</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
+
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+
+		<script type="text/javascript" src="js/ctrl.js"></script>
+		<script type="text/javascript" src="js/directive.js"></script>
+	</head>
+	<body ng-controller="mainCtrl" style="visibility: hidden">
+		<cng-import-css></cng-import-css>
+
+		<header cng-navbar="index"></header>
+
+		<!--
+		<section cng-carousel="4">
+			<div cng-carousel-item="gallery/toro/img03.jpg" cng-active="active">
+				<h1>Hermosas Cabañas de Madera</h1></div>
+			<div cng-carousel-item="gallery/bolson/img16.jpg">
+				<h1>Donde el Agua cae como un rocio del Cielo</h1></div>
+			<div cng-carousel-item="gallery/trekking/img23.jpg">
+				<h1>Un contacto intimo con la Naturaleza</h1></div>
+			<div cng-carousel-item="gallery/trekking/img21.jpg">
+				<h1>Un camino lleno de aventura</h1></div>
+		</section>
+	  -->
+
+		<section id="banner" class="container-fluid mt-4">
+			<div class="row jumbotron">
+				<div class="col-12">
+					<h1 class="display-4">Naturaleza y Aventura en un solo lugar</h1>
+					<h3 class="text-justify">El Parque Nacional Radal Siete Tazas está ubicada en la Región del Maule Provincia de Curicó, comuna de Molina. Se destaca por poseer hermosos paisajes y caidas de aguas accesibles para todos aquellos que quieran disfrutar de la tranquilidad de la Naturaleza en su forma más pura.</h3>
+					<h3 class="text-justify">Cuenta con vías de accesos bien señalizados y facilmente accesibles a las caidas de aguas más importantes y conocidas, como <span class="">El Velo de la Novia</span>, <span class="">El Salto de la Leona</span> y <span class="">Las Siete Tazas</span>.</h3>
+					<h3 class="text-justify">Para aquellos que esten buscando aventura y sean amantes del Trekking, El Parque Nacional Radal Siete Tazas les ofrece Cascadas, pozones de agua turquesa, bosques y una serie de maravillas naturales que cautivaran sus sentidos y les dejaran una experiencia inolvidable.</h3>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		<section id="info" class="container-fluid">
+			<div class="card-deck row justify-content-center align-items-center">
+				<div cng-card="huts" cng-image="gallery/toro/img01.jpg">
+					<h4 class="card-title">Cabañas</h4>
+					<p class="card-text" class="text-justify">Comodas cabañas de madera.</p>
+				</div>
+				<div cng-card="services" cng-image="gallery/trekking/img01.jpg">
+					<h4 class="card-title">Servicios</h4>
+					<p class="card-text" class="text-justify">Para hacer que la Naturaleza sea una Aventura.</p>
+				</div>
+				<div cng-card="adventures" cng-image="gallery/trekking/img20.jpg">
+					<h4 class="card-title">Naturaleza</h4>
+					<p class="card-text" class="text-justify">Hermososo Parajes Naturales.</p>
+				</div>
+			</div>
+		</section>
+
+		<footer class="page-footer" cng-footer></footer>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+	</body>
+</html>

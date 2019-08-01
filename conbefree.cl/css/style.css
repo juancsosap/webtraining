@@ -1,0 +1,74 @@
+@import url('footer-style.css');
+@import url('typography-style.css');
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  background-color: white;
+  visibility: visible !important;
+}
+
+#banner div {
+  background-color: white;
+  color: black;
+}
+
+.carousel-inner img {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.carousel-caption {
+  position: sticky;
+  font-weight: bold;
+  color: black;
+  font-family: inherit;
+  background: white;
+  padding: 5px;
+}
+
+.carousel-item {
+  height: 100vh;
+}
+
+a:link, a:visited {
+    text-decoration: inherit;
+    color: inherit;
+}
+
+.logo {
+  display: inline-block;
+  width: 90%;
+  height: 60px;
+}
+
+.jumbotron {
+    padding: 5px;
+}
+
+.card {
+  padding: 15px;
+  background-color: darkgray;
+  max-width: 320px;
+  min-width: 240px;
+  padding: 0 auto;
+}
+
+.card-img-top {
+  border-width: 1px;
+  border-color: black;
+  border-style: solid;
+  height: 200px;
+  width: 320px;
+}
+
+.lightbox .lb-image {
+  border: 2px solid white;
+}
+
+.lb-dataContainer {
+  padding-top: 15px;
+}

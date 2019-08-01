@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="mainApp">
+	<head>
+		<title>Contacto - Cabañas El Toro - Radal Siete Tazas</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
+
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+
+		<script type="text/javascript" src="js/ctrl.js"></script>
+		<script type="text/javascript" src="js/directive.js"></script>
+	</head>
+	<body ng-controller="mainCtrl" style="visibility: hidden">
+		<cng-import-css></cng-import-css>
+
+		<header cng-navbar="around"></header>
+
+		<!--
+		<section>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="img-fluid d-block w-100" src="gallery/places/img01.jpg" alt="arounds">
+					<div class="carousel-caption">
+						<h1>Cercano a muchas Facilidades</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+	  -->
+
+		<section id="banner" class="container-fluid mt-4">
+			<div class="row jumbotron">
+				<div class="col-12">
+					<h1 class="display-4">Muchas facilidades a minutos de tu estadia</h1>
+					<h3 class="text-justify">La ubicación de las cabañas el Toro es privilegiado, pues te ofrece la tranquilidad de una zona poco transitada, junto con la facilidad que proporciona la cercania de muchas facilidades como Restaurantes, locales de abarrotes, centros de salud, dependencia de Carabineros.</h3>
+					<h3 class="text-justify">Además, las cabañas se encuentran a pasos de la parada de buses que llevan hacia Molina y las atracciones del Parque Nacional Siete Tazas, ideal para aquellos que no dispongan de automovil para su visita.</h3>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		<section id="around" class="container-fluid">
+			<div class="card-deck row justify-content-center align-items-center">
+				<div id="ruta" class="content-center" cng-card-gallery="ruta" cng-max="16">
+					<h4 class="card-title">Rutas de Acceso Cercanas</h4>
+					<p class="text-justify">El Parque Nacional Radal Siete Tazas cuenta con rutas de tierra bien mantenidas y señalizadas para facilitar la movilización y el acceso de los turistas a las zonas de interes más importantes.</p>
+					<br><br>
+				</div>
+				<div id="places" class="content-center" cng-card-gallery="places" cng-max="8">
+					<h4 class="card-title">Lugares Cercanos</h4>
+					<p class="text-justify">En las cercanias de las cabañas se ecuentran muchas facilidades que permitiran hacer de su estadia una experiencia placentera, al disponer de seguridad, lugares para comprar abarrotes, lugares para comer e inclusive un centro ambulatorio disponible en caso de alguna emergencia.</p>
+				</div>
+				<div id="estero" class="content-center" cng-card-gallery="estero" cng-max="7">
+					<h4 class="card-title">Estero El Toro</h4>
+					<p class="text-justify">A pasos de las cabañas puede acceder al hermoso estero el Toro el cual es ideal para disfrutar con su toda familia sin trasladarse mucho. El mismo cuenta con pozas y zonas calmadas que son ideales para ir con niños pequeños.</p>
+					<br>
+				</div>
+			</div>
+		</section>
+
+		<footer class="page-footer" cng-footer></footer>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="lib/lightbox2/lightbox-plus-jquery.min.js"></script>
+	</body>
+</html>

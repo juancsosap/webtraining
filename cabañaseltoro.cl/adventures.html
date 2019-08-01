@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="mainApp">
+	<head>
+		<title>Aventuras - Cabañas El Toro - Radal Siete Tazas</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
+
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+
+		<script type="text/javascript" src="js/ctrl.js"></script>
+		<script type="text/javascript" src="js/directive.js"></script>
+	</head>
+	<body ng-controller="mainCtrl" style="visibility: hidden">
+		<cng-import-css></cng-import-css>
+
+		<header cng-navbar="adventures"></header>
+
+		<!--
+		<section>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="img-fluid d-block w-100" src="gallery/trekking/img26.jpg" alt="naturaleza">
+					<div class="carousel-caption">
+						<h1>Un camino lleno de aventura</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+	  -->
+
+		<section id="banner" class="container-fluid mt-4">
+			<div class="row jumbotron">
+				<div class="col-12">
+					<h1 class="display-4">Naturaleza y Aventura en un solo lugar</h1>
+					<h3 class="text-justify">El Parque Nacional Radal Siete Tazas está ubicada en la Región del Maule Provincia de Curicó, comuna de Molina. Se destaca por poseer hermosos paisajes y caidas de aguas accesibles para todos aquellos que quieran disfrutar de la tranquilidad de la Naturaleza en su forma más pura.</h3><h3>Cuenta con vías de accesos bien señalizados y facilmente accesibles a las caidas de aguas más importantes y conocidas, como <span class="">El Velo de la Novia</span>, <span class="">El Salto de la Leona</span> y <span class="">Las Siete Tazas</span>.</h3><h3>Para aquellos que esten buscando aventura y sean amantes del Trekking, El Parque Nacional Radal Siete Tazas les ofrece Cascadas, pozones de agua turquesa, bosques y una serie de maravillas naturales que cautivaran sus sentidos y les dejaran una experiencia inolvidable.</h3>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		<section id="huts" class="container-fluid">
+			<div class="card-deck row justify-content-center align-items-center">
+				<div id="novia" class="content-center" cng-card-gallery="novia" cng-max="11">
+					<h4 class="card-title">Salto Velo de la Novia</h4>
+					<p class="text-justify">Hermosa caida de agua de más de 50 mtrs de alto similar al velo de una novia, el cual podemos disfrutar desde un mirador en lo alto.</p>
+				</div>
+				<div id="leona" class="content-center" cng-card-gallery="leona" cng-max="18">
+					<h4 class="card-title">Salto La Leona</h4>
+					<p class="text-justify">Hermosa caida de agua accesible a pie que podemos disfrutar desde muy cerca, pudiendo inclusive bañarnos en sus aguas.</p>
+				</div>
+				<div id="tazas" class="content-center" cng-card-gallery="tazas" cng-max="15">
+					<h4 class="card-title">Siete Tazas</h4>
+					<p class="text-justify">Hermosa sección del rio claro que se caracteriza por la presencia de numerosos niveles y caidas de agua en forma de tazas.</p>
+				</div>
+				<div id="ingles" class="content-center" cng-card-gallery="ingles" cng-max="5">
+					<h4 class="card-title">Parque Ingles</h4>
+					<p class="text-justify">Conjunto de senderos adecuados para ofrecer una aventura para los amantes del trekking y el ciclismo de montaña.</p>
+					<br>
+				</div>
+				<div id="bolson" class="content-center" cng-card-gallery="bolson" cng-max="16">
+					<h4 class="card-title">Bolson</h4>
+					<p class="text-justify">Amplio valle que te presenta una conexión entre el agua, la vegetación y las montañas de una manera incomparable.</p>
+					<br>
+				</div>
+				<div id="animas" class="content-center" cng-card-gallery="animas" cng-max="3">
+					<h4 class="card-title">La Laguna de las Animas</h4>
+					<p class="text-justify">Ubicada en lo alto de las montañas que conforman el parque, contituye una experiencia inolvidable para aquellos aventureros que esten dispuestos a recorrer el trayecto a pie hasta sus aguas.</p>
+				</div>
+				<div id="rio" class="content-center" cng-card-gallery="rio" cng-max="13">
+					<h4 class="card-title">Rio Claro</h4>
+					<p class="text-justify">Las aguas del Rio Claro que naces desde los glaciares montañozos alimentan todas las hermosas atracciones del parque y sus aguas puden ser difrutadas tanto por aquellos que quieren ver y escuchar el correr de las mismas, como por aquellos que quieran bañarse y relajarse.</p>
+				</div>
+				<div id="conaf" class="content-center" cng-card-gallery="conaf" cng-max="34">
+					<h4 class="card-title">Sederos Conaf</h4>
+					<p class="text-justify">Como parte de las conseciones encargadas a la Conaf, se encuentran un grupo de senderos adecuados para todo tipo de personas, incluyendo aquellas que tengan movilidad reducida.</p>
+					<br><br>
+				</div>
+				<div id="fauna" class="content-center" cng-card-gallery="fauna" cng-max="4">
+					<h4 class="card-title">Fauna Local</h4>
+					<p class="text-justify">El Parque Nacional cuenta con variada fauna local que puedes disfrutar de primera mano, ofreciendote una experiencia inolvidable.</p>
+					<br><br><br>
+				</div>
+			</div>
+		</section>
+
+		<footer class="page-footer" cng-footer></footer>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="lib/lightbox2/lightbox-plus-jquery.min.js"></script>
+	</body>
+</html>

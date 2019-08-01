@@ -1,0 +1,22 @@
+.page-footer {
+    background: #343a40;
+    color: white;
+    padding: 30px 20px 5px 20px;
+    font-size: 11px;
+}
+
+ul.unstyled {
+  list-style: none;
+  padding: 5px 5px 5px 10px;
+}
+
+
+
+.page-footer li {
+  padding: 0 0 5px 0;
+}
+
+.copyright {
+  text-align: right;
+  color: gray;
+}

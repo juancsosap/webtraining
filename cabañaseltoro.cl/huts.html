@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="mainApp">
+	<head>
+		<title>Cabañas - Cabañas El Toro - Radal Siete Tazas</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="shortcut icon" type="image/x-icon" href="img/favicon.png" />
+
+		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+
+		<script type="text/javascript" src="js/ctrl.js"></script>
+		<script type="text/javascript" src="js/directive.js"></script>
+	</head>
+	<body ng-controller="mainCtrl" style="visibility: hidden">
+		<cng-import-css></cng-import-css>
+
+		<header cng-navbar="huts"></header>
+
+		<!--
+		<section>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="img-fluid d-block w-100" src="gallery/toro/img03.jpg" alt="cabañas">
+					<div class="carousel-caption">
+						<h1>Hermosas Cabañas de Madera</h1>
+					</div>
+				</div>
+			</div>
+		</section>
+	  -->
+
+		<section id="banner" class="container-fluid mt-4">
+			<div class="row jumbotron">
+				<div class="col-12">
+					<h1 class="display-4">Comodidad, Naturaleza y Aventura en un solo lugar</h1>
+					<h3 class="text-justify">Nuestras cabañas fueron creadas pensando en ofrecer a los turistas un rincon confortable y en conexión directa con la naturaleza, lo cual permite vivir una experiencia incomparable.</h3>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		<section id="huts" class="container-fluid">
+			<div class="card-deck row justify-content-center align-items-center">
+				<div id="hut1" class="content-center" cng-card-gallery="caba1" cng-max="5">
+					<h4 class="card-title">Cabaña I</h4>
+					<p class="text-justify">Comoda cabaña completamente equipada para aumentar el disfrute de los inquilinos</p>
+					<ul class="unstyled col-sm-12">
+						<div cng-item="5 Camas Individuales" cng-icon="fa fa-bed"></div>
+						<div cng-item="1 Baño con Ducha" cng-icon="fa fa-bath"></div>
+						<hr>
+						<div cng-item="45.000 CLP por dia" cng-icon="fa fa-money"></div>
+						<div cng-item="Capacidad para 5 personas" cng-icon="fa fa-child"></div>
+					</ul>
+				</div>
+				<div id="hut2" class="content-center" cng-card-gallery="caba2" cng-max="8">
+					<h4 class="card-title">Cabaña II</h4>
+					<p class="text-justify">Comoda cabaña completamente equipada para aumentar el disfrute de los inquilinos</p>
+					<ul class="unstyled col-sm-12">
+						<div cng-item="3 Camas Individuales y 1 Matrimonial" cng-icon="fa fa-bed"></div>
+						<div cng-item="1 Baño con Ducha y Agua Caliente" cng-icon="fa fa-bath"></div>
+						<hr>
+						<div cng-item="50.000 CLP por dia" cng-icon="fa fa-money"></div>
+						<div cng-item="Capacidad para 5 personas" cng-icon="fa fa-child"></div>
+					</ul>
+				</div>
+				<div id="hut3" class="content-center" cng-card-gallery="caba3" cng-max="10">
+					<h4 class="card-title">Cabaña III</h4>
+					<p class="text-justify">Comoda cabaña completamente equipada para aumentar el disfrute de los inquilinos</p>
+					<ul class="unstyled col-sm-12">
+						<div cng-item="3 Camas Individuales y 1 Cama Matrimonial" cng-icon="fa fa-bed"></div>
+						<div cng-item="1 Baño con Ducha y Agua Caliente" cng-icon="fa fa-bath"></div>
+						<hr>
+						<div cng-item="50.000 CLP por dia" cng-icon="fa fa-money"></div>
+						<div cng-item="Capacidad para 5 personas" cng-icon="fa fa-child"></div>
+					</ul>
+				</div>
+			</div>
+		</section>
+
+		<hr>
+
+		<section id="huts" class="container-fluid">
+			<div class="card-deck row justify-content-center align-items-center">
+				<div class="content-center" cng-box>
+					<p class="text-justify">Las Inquilinos de las cabañas tiene acceso a:</p>
+					<ul class="unstyled">
+						<div cng-item="Amplio estacionamiento al aire libre dentro del conjunto" cng-icon="fa fa-automobile"></div>
+						<div cng-item="Cocina y Comedor equipada para 5 personas" cng-icon="fa fa-cutlery"></div>
+						<div cng-item="Cocina con Refrigerador" cng-icon="fa fa-snowflake-o"></div>
+						<div cng-item="Terraza equipada para Asado" cng-icon="fa fa-fire"></div>
+						<div cng-item="Estufa para Invierno" cng-icon="fa fa-thermometer-empty"></div>
+						<div cng-item="No se permite hacer fogatas" cng-icon="fa fa-fire"></div>
+					</ul>
+				</div>
+				<div class="content-center" cng-box>
+					<p class="text-justify">Algunas Normas de las cabañas incluyen:</p>
+					<ul class="unstyled">
+						<div cng-item="No se permite traer de mascotas" cng-icon="fa fa-paw"></div>
+						<div cng-item="Horario de Entrada desde las 14:00" cng-icon="fa fa-hourglass"></div>
+						<div cng-item="Horario de Salida hasta las 10:00" cng-icon="fa fa-hourglass"></div>
+						<div cng-item="Reserva mínima de 2 dias" cng-icon="fa fa-calendar"></div>
+						<div cng-item="Requiere confirmación al menos una semana antes de la reserva" cng-icon="fa fa-hourglass"></div>
+						<div cng-item="30% adelantado para reservar" cng-icon="fa fa-money"></div>
+					</ul>
+					<br>
+				</div>
+				<div id="toro" class="float-left" cng-card-gallery="toro" cng-max="21">
+					<h4 class="card-title">Areas Comunes de las Cabañas El Toro</h4>
+					<p class="text-justify">Además de las comodas cabañas, el conjunto te ofrece un conjunto de comodidades adicionales.</p>
+				</div>
+			</div>
+		</section>
+
+		<footer class="page-footer" cng-footer></footer>
+
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="lib/lightbox2/lightbox-plus-jquery.min.js"></script>
+	</body>
+</html>
