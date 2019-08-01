@@ -1,0 +1,21 @@
+version: '3.3'
+services:
+  web:
+    container_name: app
+    build:
+      context: ./
+      dockerfile: dockerapp.config
+    depends_on:
+      - db
+    volumes:
+      - ../www/:/var/www/html/
+    ports:
+      - 8000:80
+  db:
+    container_name: db
+    build:
+      context: ./
+      dockerfile: dockerdb.config
+    restart: always
+    ports:
+      - 1433:1433
