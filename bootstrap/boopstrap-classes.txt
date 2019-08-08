@@ -1,0 +1,39 @@
+Sizes
+-----
+xs 	Extra Small 	  Phones                       576px
+sm 	Small Devices 	Tablets              576px   768px
+md 	Medium Devices 	Desktops             768px   992px
+lg 	Large Devices 	Large Desktops       992px   1200px
+xl  Extra large     Extra Large Desktops 1200px
+
+Colors
+------
+primary     #007bff   blue
+secondary   #6c757d   gray
+success     #28a745   green
+danger      #dc3545   red
+warning     #ffc107   yellow
+info        #17a2b8   blue-green
+light       #f8f9fa   very-light-gray
+dark        #343a40   dark-gray
+muted       #6c757d   light-gray
+white       #ffffff   white
+
+Typography
+----------
+h1
+h2
+h3
+h4
+h5
+h6
+display-1
+display-2
+display-3
+display-4
+lead
+blockquote
+blockquote-footer
+list-style
+list-unstyled
+list-inline

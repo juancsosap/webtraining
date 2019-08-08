@@ -1,0 +1,32 @@
+<html>
+ <head>
+  <title>Testing</title>
+ </head>
+ <body>
+  <code>
+  <script language="javascript">
+   var clearAlp = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+   var key = 13;
+   var cypherBody = clearAlp.length;
+   
+   var clearText = "";
+   var cypherText = "";
+   
+   clearText = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+   clearText = clearText.toUpperCase();
+   console.log("ClearText: " + clearText);
+
+   for (i = 0;i < clearText.length; i++) {
+	var clearPos = clearAlp.indexOf(clearText.substring(i,i+1));
+	var cypherPos = (clearPos + key) % cypherBody;
+	cypherText += clearAlp.substring(cypherPos,cypherPos+1);
+   }
+   document.write(clearText + "<BR>");
+   document.write(cypherText);
+  </script>
+  </code>
+  <noscript>
+   <p>You have Javascript Turned Off</p>
+  </noscript>
+ </body>
+</html>
