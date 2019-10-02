@@ -1,37 +1,13 @@
-@import url('footer-style.css');
 @import url('typography-style.css');
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,700');
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script:400,700&display=swap');
 
 html, body {
-  height: 100%;
   width: 100%;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Dancing Script', cursive;
+
   color: #222;
-  background-color: white;
+  background-color: rgba(216, 65, 236, 0.15);
   visibility: visible !important;
-}
-
-#banner div {
-  background-color: white;
-  color: black;
-}
-
-.carousel-inner img {
-  width: 100%;
-  overflow-x: hidden;
-}
-
-.carousel-caption {
-  position: sticky;
-  font-weight: bold;
-  color: black;
-  font-family: inherit;
-  background: white;
-  padding: 5px;
-}
-
-.carousel-item {
-  height: 100vh;
 }
 
 a:link, a:visited {
@@ -45,30 +21,30 @@ a:link, a:visited {
   height: 60px;
 }
 
-.jumbotron {
-    padding: 5px;
+h1 {
+  font-size: 50px !important;
 }
 
-.card {
-  padding: 15px;
-  background-color: darkgray;
-  max-width: 320px;
-  min-width: 240px;
-  padding: 0 auto;
+h3 {
+  font-size: 30px !important;
 }
 
-.card-img-top {
-  border-width: 1px;
-  border-color: black;
-  border-style: solid;
-  height: 200px;
-  width: 320px;
+.page-footer {
+  color: black;
+  padding: 30px 20px 5px 20px;
+  font-size: 11px;
 }
 
-.lightbox .lb-image {
-  border: 2px solid white;
+ul.unstyled {
+list-style: none;
+padding: 5px 5px 5px 10px;
 }
 
-.lb-dataContainer {
-  padding-top: 15px;
+.page-footer li {
+padding: 0 0 2px 0;
+}
+
+.copyright {
+text-align: right;
+color: gray;
 }

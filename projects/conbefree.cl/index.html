@@ -1,65 +1,70 @@
 <!DOCTYPE html>
-<html lang="es" ng-app="mainApp">
+<html lang="es">
 	<head>
 		<title>Conbefree Chile</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" type="image/x-icon" href="img/conbefree-favicon.png" />
 
-		<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+		<link rel="stylesheet" crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm">
+		<link rel="stylesheet" crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN">
 
-		<script type="text/javascript" src="js/ctrl.js"></script>
-		<script type="text/javascript" src="js/directive.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
-	<body ng-controller="mainCtrl" style="visibility: hidden">
-		<cng-import-css></cng-import-css>
-
-		<header cng-navbar="index"></header>
-
-		<section id="banner" class="container-fluid mt-4">
-			<div class="row jumbotron">
-				<div class="col-12">
+	<body style="visibility: hidden">
+		<div class="container-fluid">
+			<div class="row">
+				<a class="text-center col-sm-12 col-lg-6 col-xl-6 pt-5" href="index.html">
+					<img class="img-fluid" src="img/conbefree-logo.png" alt="logo">
+				</a>
+				<div class="text-center col-sm-12 col-lg-6 col-xl-6 pt-2">
 					<h1 class="text-center"><b>Conos Urinarios</b></h1>
-					<h3 class="text-center">
+					<h3 class="text-center px-3">
 						Una solución comoda, higienica y combeniente para las mujeres de hoy en día
 					</h3>
 				</div>
 			</div>
-		</section>
+		</div>
 
-		<hr>
-
-		<div class="row px-5">
-			<section id="left" class="col-lg-8 col-md-12">
-				<div class="col-12 mt-5">
-					<h1 class="text-center"><b>Conos Urinarios</b></h1>
-					<h3 class="text-center">
-						Una solución comoda, higienica y combeniente para las mujeres de hoy en día
-					</h3>
-				</div>
+		<div class="row p-5">
+			<!--
+			<section id="left" class="col-lg-6 col-md-12">
 				<div class="embed-responsive embed-responsive-16by9">
-					<iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=7qfLAdxGpXk" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/7qfLAdxGpXk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
 			</section>
-
-			<section id="right" class="col-lg-4 col-md-12">
-				<div class="col-12 mt-5">
-					<h1 class="text-center"><b>Conos Urinarios</b></h1>
-					<h3 class="text-center">
-						Una solución comoda, higienica y combeniente para las mujeres de hoy en día
-					</h3>
+			-->
+			<section id="right" class="col-lg-12 col-md-12">
+				<div class="embed-responsive embed-responsive-16by9 mt-1">
+					<iframe width="560" height="315" src="video/presentation_conbefree.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</div>
-				<img src="img/conbefree-logo.jpeg" class="img-fluid" alt="Responsive image">
 			</section>
 		</div>
 
-		<!-- Formulario de contacto -->
+		<div class="px-5">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm-8 col-md-9 col-lg-9 col-xl-10">
+						<h3>Información de Contacto</h3>
+						<hr>
+						<ul class="unstyled col-sm-12">
+							<li><h4><a href="mailto:conbefree@gmail.com" target="_blank">
+							<div class="float-left"><i class="fa fa-envelope-o fa-fw" aria-hidden="true"></i></div>
+							<div class="col-sm-12 pl-3">conbefree@gmail.com</div></a></h4></li>
+							<li><h4><a href="tel:+56946327016">
+							<div class="float-left"><i class="fa fa-whatsapp fa-fw" aria-hidden="true"></i></div>
+							<div class="col-sm-12 pl-3">+56 9 4632 7016</div></a></h4></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
 
-		<footer class="page-footer" cng-footer></footer>
+		<hr>
 
-		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+		<h6 class="copyright px-5 pb-3"><a href="https://www.linkedin.com/in/juan-c-sosa-p/" target="_blank">Copyright &copy; 2019 Juan Carlos Sosa Peña</a></h6>
+
+
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
 	</body>
 </html>
