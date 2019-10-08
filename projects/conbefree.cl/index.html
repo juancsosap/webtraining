@@ -6,8 +6,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="shortcut icon" type="image/x-icon" href="img/conbefree-favicon.png" />
 
-		<link rel="stylesheet" crossorigin="anonymous" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm">
-		<link rel="stylesheet" crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"  integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN">
+		<link rel="stylesheet" crossorigin="anonymous" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+		      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" crossorigin="anonymous" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+		      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		<link rel="stylesheet" crossorigin="anonymous" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+		      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+		<link rel="stylesheet" crossorigin="anonymous" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+		      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="lib/lightbox2/lightbox.min.css">
 
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 	</head>
@@ -26,22 +34,33 @@
 			</div>
 		</div>
 
-		<div class="row p-5">
-			<!--
-			<section id="left" class="col-lg-6 col-md-12">
-				<div class="embed-responsive embed-responsive-16by9">
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/7qfLAdxGpXk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</div>
-			</section>
-			-->
-			<section id="right" class="col-lg-12 col-md-12">
+		<div class="row p-2">
+			<section id="right" class="col-lg-10 col-md-12 mb-2">
 				<div class="embed-responsive embed-responsive-16by9 mt-1">
-					<iframe width="560" height="315" src="video/presentation_conbefree.mp4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+					<iframe width="560" height="315" src="video/presentation_conbefree.mp4" frameborder="0" 
+					        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+							allowfullscreen></iframe>
 				</div>
 			</section>
+
+			<div class="content-center col-lg-2 col-md-12 text-center">
+				<a class="lightbox-item" href="gallery/conos1.jpg" data-lightbox="conos">
+					<img class="img-fluid col-lg-12 col-md-2 mt-md-2 p-0 pb-1" src="gallery/conos1.jpg">
+					<img class="img-fluid col-lg-12 col-md-2 mt-md-2 p-0 pb-1 d-none d-lg-inline d-md-inline" src="gallery/conos2.jpg">
+					<img class="img-fluid col-lg-12 col-md-2 mt-md-2 p-0 pb-1 d-none d-lg-inline d-md-inline" src="gallery/conos3.jpg">
+					<img class="img-fluid col-lg-12 col-md-2 mt-md-2 p-0 pb-1 d-none d-lg-inline d-md-inline" src="gallery/conos4.jpg">
+				</a>
+				<a class="lightbox-item" href="gallery/conos1.jpg" data-lightbox="conos"></a>
+				<a class="lightbox-item" href="gallery/conos2.jpg" data-lightbox="conos"></a>
+				<a class="lightbox-item" href="gallery/conos3.jpg" data-lightbox="conos"></a>
+				<a class="lightbox-item" href="gallery/conos4.jpg" data-lightbox="conos"></a>
+				<a class="lightbox-item" href="gallery/conos5.jpg" data-lightbox="conos"></a>
+				<a class="lightbox-item" href="gallery/conos6.jpg" data-lightbox="conos"></a>
+				<a class="lightbox-item" href="gallery/conos7.jpg" data-lightbox="conos"></a>
+			</div>
 		</div>
 
-		<div class="px-5">
+		<div class="px-3">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-sm-8 col-md-9 col-lg-9 col-xl-10">
@@ -62,9 +81,17 @@
 
 		<hr>
 
-		<h6 class="copyright px-5 pb-3"><a href="https://www.linkedin.com/in/juan-c-sosa-p/" target="_blank">Copyright &copy; 2019 Juan Carlos Sosa Peña</a></h6>
+		<h6 class="copyright px-2 pb-3">
+			<a href="https://www.linkedin.com/in/juan-c-sosa-p/" target="_blank">Copyright &copy; 2019 Juan Carlos Sosa Peña</a>
+		</h6>
 
 
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+		<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" crossorigin="anonymous"
+		        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" crossorigin="anonymous"
+		        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" crossorigin="anonymous"
+		        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"></script>
+		<script src="lib/lightbox2/lightbox-plus-jquery.min.js"></script>
 	</body>
 </html>
